@@ -286,10 +286,6 @@ export default function ModernNav() {
         }}
       >
         {/* Liquid Glass Container - iOS WWDC25 Style */}
-        {/* refactor to reusable LiquidGlassContainer */}
-        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-        {/* @ts-expect-error client component usage */}
-        {/** Using explicit import below **/}
         <LiquidGlassContainer className='mx-2 mb-2 overflow-hidden' roundedClass='rounded-[28px]' intensity='high' shadow='2xl' border='subtle'>
           {/* Floating gradient accent line on top */}
           <div className='h-[2px] bg-gradient-to-r from-transparent via-green-500/50 to-transparent'></div>
