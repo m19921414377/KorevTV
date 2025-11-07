@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server';
 import crypto from 'crypto';
+import { NextResponse } from 'next/server';
 
-import { getTelegramToken, verifyAndConsumeTelegramToken } from '@/lib/telegram-tokens';
+import { clearConfigCache } from '@/lib/config';
 import { db } from '@/lib/db';
-import { clearConfigCache, getConfig } from '@/lib/config';
+import { getTelegramToken, verifyAndConsumeTelegramToken } from '@/lib/telegram-tokens';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

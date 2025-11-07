@@ -38,6 +38,7 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 ### 💡 Core Enhancement Highlights
 
 #### 🎥 Content Ecosystem Expansion
+
 - **YouTube Integration**: Complete YouTube search, playback, live streaming with cookieless domain support
 - **Cloud Drive Search (PanSou)**: Integrated advanced filtering and cache management
 - **Short Drama Features**: Search, playback, dedicated detail pages, mobile API proxy
@@ -45,12 +46,14 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 - **Bangumi Anime**: Intelligent anime detection, API integration, caching mechanism
 
 #### 🤖 AI Recommendation System
+
 - **AI Content Recommendations**: Support for GPT-5/o series models, dynamic prompt management
 - **Multiple Card Types**: Video recommendations, YouTube videos, video link parsing
 - **TMDB Actor Search**: Complete actor search, filtering, and caching
 - **Release Calendar & Upcoming Releases**: Upcoming content preview and tracking, support favoriting upcoming releases, automatically becomes playable after release
 
 #### 💬 Danmaku Ecosystem
+
 - **Third-party Danmaku API**: Integrated Tencent Video, iQiyi, Youku, Bilibili platforms, smart content matching prevents trailers
 - **Smart Performance Optimization**: Device-based tiered rendering, Web Worker acceleration, hardware acceleration
 - **Complete Configuration System**: Font size, speed, opacity, display area, anti-overlap adjustments
@@ -58,6 +61,7 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 - **Web-exclusive Input**: Simple "Danmu" button for quick sending (auto-hidden on mobile)
 
 #### 📊 User Management Enhancement
+
 - **Telegram Magic Link Authentication**: Secure and convenient Telegram-based login with auto webhook configuration
 - **User Level System**: Replaces large login count numbers with friendly level display
 - **Playback Statistics**: Complete viewing data statistics, analysis, visualization, global/personal stats tab switching
@@ -66,6 +70,7 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 - **Inactive User Cleanup**: Smart auto-cleanup with detailed configuration and logging
 
 #### 🎮 Player Feature Enhancement
+
 - **Chromecast Casting**: Smart browser detection, auto-excludes OPPO, Xiaomi, Huawei, Samsung vendor browsers
 - **iPad/iOS Optimization**: HLS.js official source optimization, smart device detection, multi-attempt autoplay strategy
 - **Skip Intro/Outro**: Real-time marking button, draggable floating config window, remaining time mode, position persistence
@@ -74,6 +79,7 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 - **Episode Group Scrolling**: Playback page episode selection supports scroll pagination for smooth browsing
 
 #### 📱 Interface Experience Optimization
+
 - **Hero Banner Full Category Support**: Homepage auto-rotating hero banner supports all content types (movies, series, variety shows, short dramas, anime), gradient background design
 - **Modern Navigation UI**: Desktop horizontal top navbar, mobile Liquid Glass bottom navigation, responsive switching
 - **Mobile Banner Optimization**: Swipeable card-style layout with touch gesture navigation, better suited for mobile devices
@@ -87,6 +93,7 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 - **Back to Top Button**: Quick return for long pages like release calendar
 
 #### 🔐 Security & Storage
+
 - **TVBox Complete Ecosystem**:
   - IP whitelist, user-specific Token authentication, full API compatibility, intelligent search proxy
   - TVBox Intelligent Search Proxy with adult content filtering, path prefix support, UI controls
@@ -121,6 +128,7 @@ This project is a deeply customized version based on **MoonTV**, continuously de
 ### 📜 Open Source License
 
 This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
+
 - ❌ **Commercial use is prohibited**
 - ✅ **Personal learning and use is allowed**
 - ✅ **Derivative works and distribution are allowed**
@@ -131,6 +139,7 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 ## ✨ Complete Feature List
 
 ### 🎬 Content Aggregation
+
 - ✅ Multi-source video aggregation search (streaming output, smart variants, language-aware filtering)
 - ✅ YouTube integration (search, live streaming, iframe playback, time filtering & sorting)
 - ✅ Cloud drive search (PanSou integration, advanced filtering, cache management)
@@ -140,12 +149,14 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 - ✅ TMDB actor search (filtering, caching)
 
 ### 🤖 Smart Recommendations
+
 - ✅ AI recommendation system (GPT-5/o support, dynamic prompts)
 - ✅ Release calendar (upcoming content preview)
 - ✅ Douban details enhancement (complete cast & crew info)
 - ✅ Smart search optimization (language-aware, fuzzy matching)
 
 ### 💬 Danmaku System
+
 - ✅ Third-party danmaku API (Tencent, iQiyi, Youku, Bilibili, caiji.cyou multi-platform aggregation)
 - ✅ Smart content matching (auto-filter commentary, trailers, irrelevant content)
 - ✅ Smart performance optimization (device tiering, Web Worker, hardware acceleration, segmented loading)
@@ -155,6 +166,7 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 - ✅ EXT-X-MEDIA URI handling (prevents HLS audio track loading errors)
 
 ### 📊 User Management
+
 - ✅ Telegram Magic Link authentication (secure convenient login, auto webhook config)
 - ✅ User level system (replaces large login count numbers)
 - ✅ Playback statistics (watch time, video count, recent records, global/personal tab switching)
@@ -165,6 +177,7 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 - ✅ Login time tracking (enhanced admin analytics)
 
 ### 🎮 Player Enhancement
+
 - ✅ Chromecast casting (smart browser detection, excludes vendor browsers)
 - ✅ iPad/iOS optimization (HLS.js official source optimization, smart device detection, multi-attempt autoplay retry)
 - ✅ Skip intro/outro (real-time marking button, draggable floating window, remaining time mode, cross-episode support)
@@ -175,6 +188,7 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 - ✅ Episode group scroll pagination (smooth browsing for large episode counts)
 
 ### 🎨 Interface Experience
+
 - ✅ Hero banner (homepage auto-rotating, gradient backgrounds, enhanced visual appeal, full category support for all content types)
 - ✅ Modern navigation UI (desktop horizontal top bar, mobile Liquid Glass bottom nav, responsive switching)
 - ✅ Mobile banner optimization (swipeable card-style layout, touch gesture navigation, better mobile experience)
@@ -192,6 +206,7 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 - ✅ z-index hierarchy optimization (cards, badges, modals display correctly)
 
 ### 🔐 Security & Storage
+
 - ✅ TVBox complete ecosystem (IP whitelist, user-specific Token auth, full API compatibility, intelligent search proxy)
 - ✅ TVBox intelligent search proxy (adult content filtering, path prefix support, UI controls)
 - ✅ Adult content management system (dual-layer filtering, auto-detection, batch operations, user/group-level controls)
@@ -208,6 +223,7 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 - ✅ Cross-device original episode tracking (prevents API cache issues)
 
 ### 🛠️ Technical Optimization
+
 - ✅ ArtPlayer 5.3.0 + HLS.js 1.6.13 (official source optimization)
 - ✅ Danmaku plugin 5.2.0 (Web Worker acceleration, useWorker: true, lockTime: 2)
 - ✅ Next.js SSR compatibility (dynamic import, client-side loading)
@@ -241,18 +257,18 @@ This project is licensed under **CC BY-NC-SA 4.0**, with the following terms:
 
 ## 🔧 Tech Stack
 
-| Category      | Main Dependencies                                                                                              |
-| ------------- | -------------------------------------------------------------------------------------------------------------- |
-| Frontend      | [Next.js 14.2.23](https://nextjs.org/) · App Router                                                           |
-| UI & Styling  | [Tailwind CSS 3.4.17](https://tailwindcss.com/) · [Framer Motion 12](https://www.framer.com/motion/)          |
-| Language      | TypeScript 4.9.5                                                                                               |
-| Player        | [ArtPlayer 5.3.0](https://github.com/zhw2590582/ArtPlayer) · [HLS.js 1.6.13](https://github.com/video-dev/hls.js/) · [artplayer-plugin-danmuku 5.2.0](https://github.com/zhw2590582/ArtPlayer) |
-| State Mgmt    | React Context API · React Hooks                                                                                |
-| Data Storage  | Kvrocks · Redis · Upstash · localStorage                                                                       |
-| Virtualization| [react-window 2.2.0](https://github.com/bvaughn/react-window) · ResizeObserver                                |
-| UI Components | [@headlessui/react 2](https://headlessui.com/) · [Lucide Icons](https://lucide.dev/) · [React Icons 5](https://react-icons.github.io/react-icons/) |
-| Code Quality  | ESLint · Prettier · Jest · Husky                                                                               |
-| Deployment    | Docker · Docker Compose                                                                                        |
+| Category       | Main Dependencies                                                                                                                                                                              |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frontend       | [Next.js 14.2.23](https://nextjs.org/) · App Router                                                                                                                                            |
+| UI & Styling   | [Tailwind CSS 3.4.17](https://tailwindcss.com/) · [Framer Motion 12](https://www.framer.com/motion/)                                                                                           |
+| Language       | TypeScript 4.9.5                                                                                                                                                                               |
+| Player         | [ArtPlayer 5.3.0](https://github.com/zhw2590582/ArtPlayer) · [HLS.js 1.6.13](https://github.com/video-dev/hls.js/) · [artplayer-plugin-danmuku 5.2.0](https://github.com/zhw2590582/ArtPlayer) |
+| State Mgmt     | React Context API · React Hooks                                                                                                                                                                |
+| Data Storage   | Kvrocks · Redis · Upstash · localStorage                                                                                                                                                       |
+| Virtualization | [react-window 2.2.0](https://github.com/bvaughn/react-window) · ResizeObserver                                                                                                                 |
+| UI Components  | [@headlessui/react 2](https://headlessui.com/) · [Lucide Icons](https://lucide.dev/) · [React Icons 5](https://react-icons.github.io/react-icons/)                                             |
+| Code Quality   | ESLint · Prettier · Jest · Husky                                                                                                                                                               |
+| Deployment     | Docker · Docker Compose                                                                                                                                                                        |
 
 ---
 
@@ -265,6 +281,7 @@ Click the button below for one-click deployment, automatically configures LunaTV
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/2425O0/deploy)
 
 **Advantages**:
+
 - ✅ Zero configuration, instant startup (auto-deploy complete environment)
 - ✅ Automatic HTTPS and global CDN acceleration
 - ✅ Persistent storage, data never lost
@@ -390,20 +407,22 @@ Zeabur is a one-stop cloud deployment platform. Using pre-built Docker images al
 **Deployment Steps:**
 
 1. **Add KVRocks Service** (Add database first)
+
    - Click "Add Service" > "Docker Images"
    - Enter image name: `apache/kvrocks`
    - Configure port: `6666` (TCP)
    - **Remember the service name** (usually `apachekvrocks`)
    - **Configure Persistent Volume (Important)**:
-     * Find "Volumes" section in service settings
-     * Click "Add Volume" to add new volume
-     * Volume ID: `kvrocks-data` (customizable, only letters, numbers, and hyphens)
-     * Path: `/var/lib/kvrocks/db`
-     * Save configuration
+     - Find "Volumes" section in service settings
+     - Click "Add Volume" to add new volume
+     - Volume ID: `kvrocks-data` (customizable, only letters, numbers, and hyphens)
+     - Path: `/var/lib/kvrocks/db`
+     - Save configuration
 
    > 💡 **Important**: Persistent volume path must be set to `/var/lib/kvrocks/db` (KVRocks data directory). This keeps config files in the container while persisting database files, preventing data loss on restart!
 
 2. **Add LunaTV Service**
+
    - Click "Add Service" > "Docker Images"
    - Enter image name: `ghcr.io/korean032/korevtv:latest`
    - Configure port: `3000` (HTTP)
@@ -432,6 +451,7 @@ Zeabur is a one-stop cloud deployment platform. Using pre-built Docker images al
    ```
 
    **Note**:
+
    - Use service name as hostname: `redis://apachekvrocks:6666`
    - Replace with actual service name if different
    - Both services must be in the same Project
@@ -442,12 +462,12 @@ Zeabur is a one-stop cloud deployment platform. Using pre-built Docker images al
 
 #### 5. Set Up Access Domain (Required)
 
-   - In the LunaTV service page, click the "Networking" or "Network" tab
-   - Click "Generate Domain" to create a free Zeabur domain (e.g., `xxx.zeabur.app`)
-   - Or bind a custom domain:
-     * Click "Add Domain" to add your domain
-     * Follow the prompts to configure DNS CNAME record pointing to the Zeabur-provided target
-   - Once the domain is set up, you can access LunaTV through the domain
+- In the LunaTV service page, click the "Networking" or "Network" tab
+- Click "Generate Domain" to create a free Zeabur domain (e.g., `xxx.zeabur.app`)
+- Or bind a custom domain:
+  - Click "Add Domain" to add your domain
+  - Follow the prompts to configure DNS CNAME record pointing to the Zeabur-provided target
+- Once the domain is set up, you can access LunaTV through the domain
 
 6. **Bind Custom Domain (Optional)**
    - In service settings, click "Domains"
@@ -461,6 +481,7 @@ When a new Docker image version is released, Zeabur won't automatically update. 
 **Update Steps:**
 
 1. **Enter Service Page**
+
    - Click on the service you want to update (LunaTV or KVRocks)
 
 2. **Restart Service**
@@ -468,6 +489,7 @@ When a new Docker image version is released, Zeabur won't automatically update. 
    - Zeabur will automatically pull the latest `latest` image and redeploy
 
 > 💡 **Tips**:
+>
 > - When using `latest` tag, Restart will automatically pull the latest image
 > - For production environments, it's recommended to use fixed version tags (e.g., `v5.5.5`) to avoid unexpected updates
 
@@ -499,6 +521,7 @@ Perfect for users without servers. Completely free deployment (Vercel Free Tier 
 #### Prerequisites
 
 1. **Create Upstash Redis Instance**
+
    - Visit [upstash.com](https://upstash.com/)
    - Register and create a new Redis database
    - Select region (choose the closest to your location)
@@ -510,6 +533,7 @@ Perfect for users without servers. Completely free deployment (Vercel Free Tier 
 #### Deployment Steps
 
 1. **Import to Vercel**
+
    - Visit [vercel.com](https://vercel.com/)
    - Login and click "Add New" > "Project"
    - Import your forked repository
@@ -544,6 +568,7 @@ Perfect for users without servers. Completely free deployment (Vercel Free Tier 
    ```
 
 3. **Deploy Project**
+
    - Click "Deploy" button
    - Wait for build to complete (approximately 2-5 minutes)
    - Access the domain provided by Vercel after successful deployment
@@ -631,39 +656,40 @@ You can also enter specific content like "Harry Potter", which works the same as
 
 ### Required Variables
 
-| Variable                     | Description        | Example Value           |
-| ---------------------------- | ------------------ | ----------------------- |
-| `USERNAME`                   | Admin account      | `admin`                 |
-| `PASSWORD`                   | Admin password     | `your_secure_password`  |
-| `NEXT_PUBLIC_STORAGE_TYPE`   | Storage type       | `kvrocks` / `redis` / `upstash` |
+| Variable                   | Description    | Example Value                   |
+| -------------------------- | -------------- | ------------------------------- |
+| `USERNAME`                 | Admin account  | `admin`                         |
+| `PASSWORD`                 | Admin password | `your_secure_password`          |
+| `NEXT_PUBLIC_STORAGE_TYPE` | Storage type   | `kvrocks` / `redis` / `upstash` |
 
 ### Storage Configuration
 
-| Variable          | Description           | Example Value                   |
-| ----------------- | --------------------- | ------------------------------- |
-| `KVROCKS_URL`     | Kvrocks connection URL | `redis://moontv-kvrocks:6666`  |
-| `REDIS_URL`       | Redis connection URL   | `redis://moontv-redis:6379`    |
-| `UPSTASH_URL`     | Upstash endpoint       | `https://xxx.upstash.io`       |
-| `UPSTASH_TOKEN`   | Upstash Token          | `AxxxxxxxxxxxxxxxxxxxxxxxxxxxQ==` |
+| Variable        | Description            | Example Value                     |
+| --------------- | ---------------------- | --------------------------------- |
+| `KVROCKS_URL`   | Kvrocks connection URL | `redis://moontv-kvrocks:6666`     |
+| `REDIS_URL`     | Redis connection URL   | `redis://moontv-redis:6379`       |
+| `UPSTASH_URL`   | Upstash endpoint       | `https://xxx.upstash.io`          |
+| `UPSTASH_TOKEN` | Upstash Token          | `AxxxxxxxxxxxxxxxxxxxxxxxxxxxQ==` |
 
 ### Optional Configuration
 
-| Variable                                | Description              | Default     | Options                    |
-| --------------------------------------- | ------------------------ | ----------- | -------------------------- |
-| `SITE_BASE`                             | Site URL                 | Empty       | `https://example.com`      |
-| `NEXT_PUBLIC_SITE_NAME`                 | Site name                | `MoonTV`    | Any string                 |
-| `ANNOUNCEMENT`                          | Site announcement        | Default     | Any string                 |
-| `NEXT_PUBLIC_SEARCH_MAX_PAGE`           | Max search pages         | `5`         | `1-50`                     |
-| `NEXT_PUBLIC_DOUBAN_PROXY_TYPE`         | Douban data proxy type   | `direct`    | `direct` / `cors-proxy-zwei` / `cmliussss-cdn-tencent` / `cmliussss-cdn-ali` / `custom` |
-| `NEXT_PUBLIC_DOUBAN_PROXY`              | Custom Douban proxy      | Empty       | URL prefix                 |
-| `NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE`   | Douban image proxy type  | `direct`    | `direct` / `server` / `img3` / `cmliussss-cdn-tencent` / `cmliussss-cdn-ali` / `custom` |
-| `NEXT_PUBLIC_DOUBAN_IMAGE_PROXY`        | Custom image proxy       | Empty       | URL prefix                 |
-| `NEXT_PUBLIC_DISABLE_YELLOW_FILTER`     | Disable adult filter     | `false`     | `true` / `false`           |
-| `NEXT_PUBLIC_FLUID_SEARCH`              | Streaming search output  | `true`      | `true` / `false`           |
+| Variable                              | Description             | Default  | Options                                                                                 |
+| ------------------------------------- | ----------------------- | -------- | --------------------------------------------------------------------------------------- |
+| `SITE_BASE`                           | Site URL                | Empty    | `https://example.com`                                                                   |
+| `NEXT_PUBLIC_SITE_NAME`               | Site name               | `MoonTV` | Any string                                                                              |
+| `ANNOUNCEMENT`                        | Site announcement       | Default  | Any string                                                                              |
+| `NEXT_PUBLIC_SEARCH_MAX_PAGE`         | Max search pages        | `5`      | `1-50`                                                                                  |
+| `NEXT_PUBLIC_DOUBAN_PROXY_TYPE`       | Douban data proxy type  | `direct` | `direct` / `cors-proxy-zwei` / `cmliussss-cdn-tencent` / `cmliussss-cdn-ali` / `custom` |
+| `NEXT_PUBLIC_DOUBAN_PROXY`            | Custom Douban proxy     | Empty    | URL prefix                                                                              |
+| `NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE` | Douban image proxy type | `direct` | `direct` / `server` / `img3` / `cmliussss-cdn-tencent` / `cmliussss-cdn-ali` / `custom` |
+| `NEXT_PUBLIC_DOUBAN_IMAGE_PROXY`      | Custom image proxy      | Empty    | URL prefix                                                                              |
+| `NEXT_PUBLIC_DISABLE_YELLOW_FILTER`   | Disable adult filter    | `false`  | `true` / `false`                                                                        |
+| `NEXT_PUBLIC_FLUID_SEARCH`            | Streaming search output | `true`   | `true` / `false`                                                                        |
 
 ### Douban Proxy Options
 
 **DOUBAN_PROXY_TYPE Options**:
+
 - `direct`: Server directly requests Douban (may be blocked)
 - `cors-proxy-zwei`: Via CORS proxy provided by [Zwei](https://github.com/bestzwei)
 - `cmliussss-cdn-tencent`: Tencent Cloud CDN provided by [CMLiussss](https://github.com/cmliu)
@@ -671,6 +697,7 @@ You can also enter specific content like "Harry Potter", which works the same as
 - `custom`: Custom proxy (requires `DOUBAN_PROXY`)
 
 **DOUBAN_IMAGE_PROXY_TYPE Options**:
+
 - `direct`: Browser directly requests Douban image domain
 - `server`: Server proxies requests
 - `img3`: Douban official Alibaba Cloud CDN
@@ -693,6 +720,7 @@ Visit `http://your-domain:3000/admin` and login with admin account.
 The admin panel provides the following feature modules (some features are owner-only):
 
 #### 📁 Configuration File (Owner Only)
+
 - **Configuration Subscription**:
   - Subscription URL settings
   - Auto-fetch remote configuration
@@ -702,6 +730,7 @@ The admin panel provides the following feature modules (some features are owner-
   - Online save configuration
 
 #### ⚙️ Site Configuration
+
 - **Basic Settings**:
   - Site name
   - Site announcement
@@ -723,6 +752,7 @@ The admin panel provides the following feature modules (some features are owner-
   - Feature enable toggle
 
 #### 👥 User Configuration
+
 - **User Registration Settings** (Owner Only):
   - User registration toggle
   - Auto cleanup inactive users
@@ -739,6 +769,7 @@ The admin panel provides the following feature modules (some features are owner-
   - Delete users
 
 #### 🎬 Video Source Configuration
+
 - **Video Source Management**:
   - Add video source (name, API address)
   - Batch enable/disable/delete
@@ -753,6 +784,7 @@ The admin panel provides the following feature modules (some features are owner-
   - Side drawer test results display
 
 #### 📺 Live Source Configuration
+
 - **Live Source Management**:
   - Add live source (name, m3u/m3u8 address)
   - Refresh live source data
@@ -760,12 +792,14 @@ The admin panel provides the following feature modules (some features are owner-
   - Edit/Delete live sources
 
 #### 🏷️ Category Configuration
+
 - **Custom Categories**:
   - Add/Edit custom categories
   - Drag-and-drop sorting
   - Douban search-based categories
 
 #### 🔍 Cloud Drive Search Configuration
+
 - **Basic Settings**:
   - Cloud drive search feature toggle
   - PanSou service address
@@ -777,25 +811,30 @@ The admin panel provides the following feature modules (some features are owner-
   - Magnet links, ED2K links
 
 #### 🤖 AI Recommendation Configuration
+
 - OpenAI API configuration
 - Model selection and parameters
 - Recommendation prompt management
 
 #### 🎥 YouTube Configuration
+
 - YouTube Data API v3 key
 - Search and cache configuration
 - Feature enable toggle
 
 #### 🔐 TVBox Security Configuration
+
 - IP whitelist management
 - Token authentication configuration
 - TVBox API settings
 
 #### 🗄️ Cache Management (Owner Only)
+
 - View and clear various caches
 - YouTube, cloud drive, Douban, danmaku cache statistics
 
 #### 📦 Data Migration (Owner Only)
+
 - Import/Export entire site data
 - Database migration tools
 
@@ -833,10 +872,12 @@ services:
 [Selene](https://github.com/MoonTechLab/Selene) is the official mobile app developed by the original MoonTV author, built with Flutter and optimized for mobile phones.
 
 #### Supported Platforms
+
 - **Android**: 5.0+ (API 21), ARM64 architecture only
 - **iOS**: 12.0+
 
 #### Key Features
+
 - 🎨 Modern Material Design 3 interface
 - 🌗 Dark/light theme support
 - 🔍 Multi-source aggregated search (with SSE real-time search)
@@ -856,6 +897,7 @@ services:
 5. All playback records and favorites will sync with the web version automatically
 
 #### Important Notes
+
 - ⚠️ Selene is optimized for mobile phones, **NOT compatible with tablets, TVs, emulators**
 - ⚠️ For Android TV or tablets, please use OrionTV below
 
@@ -868,6 +910,7 @@ services:
 This project works with [OrionTV](https://github.com/zimplexing/OrionTV) on Android TV and tablets.
 
 #### Applicable Scenarios
+
 - Android TV / Smart TVs
 - Android tablets
 - Large screen devices
@@ -888,6 +931,7 @@ For complete feature updates and bug fixes, see [CHANGELOG](CHANGELOG).
 ### Latest Version: v5.6.2 (2025-11-06)
 
 #### Added
+
 - 🎬 Hero Banner Full Category Support: Added detailed descriptions to hero banner for all content types (movies, series, variety shows, short dramas, anime)
 - 📅 Upcoming Release Calendar: Added upcoming releases section displaying movie and TV show releases within the next 30 days
 - 🖼️ Release Calendar Poster Extraction: Implemented poster image scraping from manmankan website for upcoming content (supports lazy-loaded data-original)
@@ -899,6 +943,7 @@ For complete feature updates and bug fixes, see [CHANGELOG](CHANGELOG).
 - 📺 Post-load DVR Detection for Live Streams: Player uses video.seekable API after loading to detect DVR/timeshift support, displays notification banner when seekable range exceeds 60 seconds, adds button to enable progress bar and reload player in DVR mode
 
 #### Improved
+
 - 🎨 Release Calendar UI Beautification: Optimized release calendar page visual effects with gradient backgrounds and modern design
 - 📱 Large Screen Responsive Layout: Improved responsive layout effects on large screen devices
 - 🎯 Upcoming Content Deduplication: Deduplicate upcoming release data based on title, keeping earliest release date
@@ -909,6 +954,7 @@ For complete feature updates and bug fixes, see [CHANGELOG](CHANGELOG).
 - 📊 Playback Record Request Optimization: Reduced playback record API request frequency to lower network burden
 
 #### Fixed
+
 - 🖼️ manmankan Image Proxy Support: Added Referer support for manmankan.com to image proxy to bypass hotlink protection
 - 🔧 Douban Details Plot Summary Fix: Fixed extraction of complete plot summary from Douban details
 - 🗑️ Douban Details Cache Invalidation: Automatically invalidate cache when plot_summary is missing to ensure data integrity
@@ -966,6 +1012,7 @@ View [Complete Changelog](CHANGELOG) for all version changes.
 This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 **This means**:
+
 - ✅ You are free to share, copy, and modify this project
 - ✅ You must give appropriate credit, provide a link to the license
 - ❌ You may not use this project for commercial purposes
@@ -980,11 +1027,13 @@ Based on [MoonTV](https://github.com/MoonTechLab/LunaTV) with extensive customiz
 ## 🙏 Acknowledgments
 
 ### Original Projects
+
 - [MoonTV](https://github.com/MoonTechLab/LunaTV) — Original project
 - [Selene](https://github.com/MoonTechLab/Selene) — Official mobile app
 - [LibreTV](https://github.com/LibreSpark/LibreTV) — Inspiration source
 
 ### Core Dependencies
+
 - [Next.js](https://nextjs.org/) — React framework
 - [ArtPlayer](https://github.com/zhw2590582/ArtPlayer) — Powerful web video player
 - [HLS.js](https://github.com/video-dev/hls.js) — HLS streaming support
@@ -992,6 +1041,7 @@ Based on [MoonTV](https://github.com/MoonTechLab/LunaTV) with extensive customiz
 - [Tailwind CSS](https://tailwindcss.com/) — CSS framework
 
 ### Data Sources & Services
+
 - [Douban](https://movie.douban.com/) — Movie & TV info data
 - [TMDB](https://www.themoviedb.org/) — Movie database
 - [Bangumi](https://bangumi.tv/) — Anime information
@@ -999,6 +1049,7 @@ Based on [MoonTV](https://github.com/MoonTechLab/LunaTV) with extensive customiz
 - [CMLiussss](https://github.com/cmliu) — Douban CDN service
 
 ### Special Thanks
+
 - All sites providing free video APIs
 - Open source community contributors
 - Users who provide feedback and suggestions

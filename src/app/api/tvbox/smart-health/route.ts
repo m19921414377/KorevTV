@@ -1,8 +1,8 @@
 /* eslint-disable no-console, @typescript-eslint/no-explicit-any */
 import { NextRequest, NextResponse } from 'next/server';
 
-import { getSpiderJar, getSpiderStatus } from '@/lib/spiderJar';
 import { detectNetworkEnvironment } from '@/lib/networkDetection';
+import { getSpiderJar, getSpiderStatus } from '@/lib/spiderJar';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

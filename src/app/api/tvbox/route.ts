@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { getConfig } from '@/lib/config';
 import { db } from '@/lib/db';
-import { getSpiderJar, getCandidates } from '@/lib/spiderJar';
+import { getCandidates,getSpiderJar } from '@/lib/spiderJar';
 
 // Helper function to get base URL with SITE_BASE env support
 function getBaseUrl(request: NextRequest): string {

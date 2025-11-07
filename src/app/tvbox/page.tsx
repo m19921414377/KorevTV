@@ -1,6 +1,6 @@
 'use client';
 
-import { AlertTriangle, Monitor, Shield, Smartphone, Tv, Activity, Heart, Wrench, Globe, Zap, CheckCircle2, XCircle, Clock, Search } from 'lucide-react';
+import { Activity, AlertTriangle, CheckCircle2, Clock, Globe, Heart, Search,Shield, Tv, Wrench, XCircle, Zap } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 
 import PageLayout from '@/components/PageLayout';

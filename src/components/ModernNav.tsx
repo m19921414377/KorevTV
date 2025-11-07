@@ -7,10 +7,10 @@ import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+import LiquidGlassContainer from './LiquidGlassContainer';
 import { useSite } from './SiteProvider';
 import { ThemeToggle } from './ThemeToggle';
 import { UserMenu } from './UserMenu';
-import LiquidGlassContainer from './LiquidGlassContainer';
 
 interface NavItem {
   icon: any;
