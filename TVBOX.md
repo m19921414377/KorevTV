@@ -2,13 +2,13 @@
 
 ## 🎯 功能介绍
 
-LunaTV 提供完整的 TVBox 配置接口，将您的视频源无缝导入到 TVBox 应用中。支持多种配置模式、智能 spider jar 管理、安全访问控制等高级功能。
+KorevTV 提供完整的 TVBox 配置接口，将您的视频源无缝导入到 TVBox 应用中。支持多种配置模式、智能 spider jar 管理、安全访问控制等高级功能。
 
 ## 🚀 快速开始
 
 ### 1. 访问配置页面
 
-在 LunaTV 网站中，点击左侧导航栏的"TVBox 配置"菜单，或直接访问：
+在 KorevTV 网站中，点击左侧导航栏的"TVBox 配置"菜单，或直接访问：
 
 ```
 https://your-domain.com/tvbox
@@ -16,7 +16,7 @@ https://your-domain.com/tvbox
 
 ### 2. 选择配置模式
 
-LunaTV 提供 4 种配置模式，适应不同使用场景：
+KorevTV 提供 4 种配置模式，适应不同使用场景：
 
 #### 📊 **标准模式**（推荐）
 ```

@@ -7,13 +7,13 @@
 
 ---
 
-# LunaTV Enhanced Edition
+# KorevTV
 
 <div align="center">
-  <img src="public/logo.png" alt="LunaTV Logo" width="120">
+  <img src="public/logo.png" alt="KorevTV Logo" width="120">
 </div>
 
-> 🎬 **LunaTV Enhanced Edition** is a comprehensive video streaming platform deeply customized from MoonTV. Built on top of the original version, it adds **50+ major feature enhancements** including **YouTube Integration**, **Cloud Drive Search**, **AI Recommendations**, **Short Drama**, **IPTV Live TV**, **Bangumi Anime**, **Playback Statistics**, **Danmaku System**, and more, delivering the ultimate online streaming experience.
+> 🎬 **KorevTV** is a comprehensive video streaming platform deeply customized from MoonTV. Built on top of the original version, it adds **50+ major feature enhancements** including **YouTube Integration**, **Cloud Drive Search**, **AI Recommendations**, **Short Drama**, **IPTV Live TV**, **Bangumi Anime**, **Playback Statistics**, **Danmaku System**, and more, delivering the ultimate online streaming experience.
 
 <div align="center">
 
@@ -971,7 +971,7 @@ This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/lic
 - ❌ You may not use this project for commercial purposes
 - ⚠️ If you remix, transform, or build upon the material, you must distribute your contributions under the same license
 
-© 2025 LunaTV Enhanced Edition & Contributors
+© 2025 KorevTV & Contributors
 
 Based on [MoonTV](https://github.com/MoonTechLab/LunaTV) with extensive customization.
 
@@ -1015,6 +1015,6 @@ Based on [MoonTV](https://github.com/MoonTechLab/LunaTV) with extensive customiz
 
 **If this project helps you, please give it a ⭐ Star!**
 
-Made with ❤️ by LunaTV Enhanced Edition Team
+Made with ❤️ by KorevTV Team
 
 </div>

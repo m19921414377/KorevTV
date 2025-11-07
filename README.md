@@ -7,13 +7,13 @@
 
 ---
 
-# LunaTV Enhanced Edition
+# KorevTV
 
 <div align="center">
-  <img src="public/logo.png" alt="LunaTV Logo" width="120">
+  <img src="public/logo.png" alt="KorevTV Logo" width="120">
 </div>
 
-> 🎬 **LunaTV Enhanced Edition** 是基于 MoonTV 深度二次开发的全功能影视聚合播放平台。在原版基础上新增了 **YouTube 集成**、**网盘搜索**、**AI 推荐**、**短剧功能**、**IPTV 直播**、**Bangumi 动漫**、**播放统计**、**弹幕系统**等 50+ 重大功能增强，打造极致的在线观影体验。
+> 🎬 **KorevTV** 是基于 MoonTV 深度二次开发的全功能影视聚合播放平台。在原版基础上新增了 **YouTube 集成**、**网盘搜索**、**AI 推荐**、**短剧功能**、**IPTV 直播**、**Bangumi 动漫**、**播放统计**、**弹幕系统**等 50+ 重大功能增强，打造极致的在线观影体验。
 
 <div align="center">
 
@@ -958,7 +958,7 @@ services:
 - ❌ 您不得将本项目用于商业目的
 - ⚠️ 若您修改、转换或以本项目为基础进行创作，您必须以相同的许可协议分发您的作品
 
-© 2025 LunaTV Enhanced Edition & Contributors
+© 2025 KorevTV & Contributors
 
 基于 [MoonTV](https://github.com/MoonTechLab/LunaTV) 进行二次开发。
 
@@ -1002,6 +1002,6 @@ services:
 
 **如果这个项目对你有帮助，请给个 ⭐ Star 支持一下！**
 
-Made with ❤️ by LunaTV Enhanced Edition Team
+Made with ❤️ by KorevTV Team
 
 </div>
