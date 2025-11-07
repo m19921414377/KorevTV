@@ -286,9 +286,9 @@ Kvrocks is a persistent Redis-compatible storage based on RocksDB, recommended f
 
 ```yml
 services:
-  moontv-core:
-    image: ghcr.io/szemeng76/lunatv:latest
-    container_name: moontv-core
+  korevtv-core:
+    image: ghcr.io/korean032/korevtv:latest
+    container_name: korevtv-core
     restart: on-failure
     ports:
       - '3000:3000'
@@ -305,7 +305,7 @@ services:
     depends_on:
       - moontv-kvrocks
 
-  moontv-kvrocks:
+  korevtv-kvrocks:
     image: apache/kvrocks
     container_name: moontv-kvrocks
     restart: unless-stopped
@@ -315,7 +315,7 @@ services:
       - moontv-network
 
 networks:
-  moontv-network:
+  korevtv-network:
     driver: bridge
 
 volumes:
@@ -328,9 +328,9 @@ Redis default configuration may lead to data loss. Persistence must be enabled.
 
 ```yml
 services:
-  moontv-core:
-    image: ghcr.io/szemeng76/lunatv:latest
-    container_name: moontv-core
+  korevtv-core:
+    image: ghcr.io/korean032/korevtv:latest
+    container_name: korevtv-core
     restart: on-failure
     ports:
       - '3000:3000'
@@ -344,7 +344,7 @@ services:
     depends_on:
       - moontv-redis
 
-  moontv-redis:
+  korevtv-redis:
     image: redis:alpine
     container_name: moontv-redis
     restart: unless-stopped
@@ -355,7 +355,7 @@ services:
       - moontv-network
 
 networks:
-  moontv-network:
+  korevtv-network:
     driver: bridge
 ```
 
@@ -369,9 +369,9 @@ Suitable for scenarios where self-hosted databases are not available. Fully mana
 
 ```yml
 services:
-  moontv-core:
-    image: ghcr.io/szemeng76/lunatv:latest
-    container_name: moontv-core
+  korevtv-core:
+    image: ghcr.io/korean032/korevtv:latest
+    container_name: korevtv-core
     restart: on-failure
     ports:
       - '3000:3000'
@@ -405,7 +405,7 @@ Zeabur is a one-stop cloud deployment platform. Using pre-built Docker images al
 
 2. **Add LunaTV Service**
    - Click "Add Service" > "Docker Images"
-   - Enter image name: `ghcr.io/szemeng76/lunatv:latest`
+   - Enter image name: `ghcr.io/korean032/korevtv:latest`
    - Configure port: `3000` (HTTP)
 
 3. **Configure Environment Variables**
