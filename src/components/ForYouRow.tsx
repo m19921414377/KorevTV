@@ -51,6 +51,23 @@ export default function ForYouRow() {
           setRecords(rec || {});
         }
       } catch {}
+      // 拉取系统权重（若已配置）
+      try {
+        const res = await fetch('/api/admin/ai-recommend', { method: 'GET' });
+        if (res.ok) {
+          const data = await res.json();
+          if (data?.recommendWeights) {
+            setWeights((w) => ({
+              ...w,
+              wFav: Number(data.recommendWeights.wFav ?? w.wFav),
+              wRecency: Number(data.recommendWeights.wRecency ?? w.wRecency),
+              wProgress: Number(data.recommendWeights.wProgress ?? w.wProgress),
+              decayDays: Number(data.recommendWeights.decayDays ?? w.decayDays),
+              maxItems: Number(data.recommendWeights.maxItems ?? w.maxItems),
+            }));
+          }
+        }
+      } catch {}
     })();
     return () => {
       alive = false;
