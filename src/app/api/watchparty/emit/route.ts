@@ -79,6 +79,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: String(e) }, { status: 500 });
   }
 }
+
+// 提供一个 GET，避免构建阶段对该路径的 GET 探测失败
+export async function GET() {
+  return NextResponse.json({ ok: true, message: 'watchparty emit endpoint (POST to broadcast events)' });
+}
     if (event.type === 'presence' && event.payload?.action === 'leave') {
       state.members.delete(event.sender);
     }
