@@ -21,6 +21,14 @@ export default function WatchPartyPanel() {
 
   useEffect(() => {
     selfIdRef.current = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    // 从 URL 读取房间和昵称（支持邀请链接：?room=xxx&name=yyy）
+    try {
+      const sp = new URLSearchParams(window.location.search);
+      const r = sp.get('room');
+      const n = sp.get('name');
+      if (r) setRoom(r);
+      if (n) setName(n);
+    } catch {}
   }, []);
 
   const getVideo = (): HTMLVideoElement | null => {
@@ -40,9 +48,17 @@ export default function WatchPartyPanel() {
   };
 
   const connect = () => {
-    if (!room) return;
+    if (!room) {
+      // 如果用户未填写，自动生成一个临时房间号
+      setRoom((prev) => {
+        if (prev && prev.length > 0) return prev;
+        const generated = generateRoomId();
+        return generated;
+      });
+    }
     disconnect();
-    const es = new EventSource(`/api/watchparty/events?room=${encodeURIComponent(room)}`);
+    const targetRoom = room || generateRoomId();
+    const es = new EventSource(`/api/watchparty/events?room=${encodeURIComponent(targetRoom)}`);
     es.onmessage = (ev) => {
       try {
         const data = JSON.parse(ev.data);
@@ -124,14 +140,44 @@ export default function WatchPartyPanel() {
     setChatText('');
   };
 
+  const generateRoomId = () => {
+    // 生成 6 位房间号：字母数字混合
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let id = '';
+    for (let i = 0; i < 6; i++) id += chars[Math.floor(Math.random() * chars.length)];
+    return id;
+  };
+
+  const createRoom = () => {
+    const id = generateRoomId();
+    setRoom(id);
+  };
+
+  const copyInvite = async () => {
+    try {
+      const url = new URL(window.location.href);
+      const sp = new URLSearchParams(url.search);
+      if (room) sp.set('room', room);
+      if (name) sp.set('name', name);
+      url.search = sp.toString();
+      const invite = url.toString();
+      await navigator.clipboard.writeText(invite);
+      setMessages((prev) => [...prev.slice(-50), { id: `sys-${Date.now()}`, text: '已复制邀请链接', ts: Date.now() }]);
+    } catch {
+      setMessages((prev) => [...prev.slice(-50), { id: `sys-${Date.now()}`, text: '复制失败，请手动复制地址栏', ts: Date.now() }]);
+    }
+  };
+
   return (
     <div className='space-y-3'>
       <LiquidGlassContainer className='px-3 py-2 flex items-center gap-2' roundedClass='rounded-full' intensity='medium' shadow='lg' border='subtle'>
         <span className='text-xs font-semibold text-gray-700 dark:text-gray-200'>一起观看</span>
         <input value={room} onChange={(e) => setRoom(e.target.value.trim())} placeholder='房间号' className='text-xs px-2 py-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-800/60' />
         <input value={name} onChange={(e) => setName(e.target.value)} placeholder='昵称' className='text-xs px-2 py-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-800/60' />
+        <button onClick={createRoom} className='text-xs px-3 py-1 rounded-full bg-indigo-600 text-white hover:bg-indigo-700'>生成房间号</button>
+        <button onClick={copyInvite} className='text-xs px-3 py-1 rounded-full bg-gray-700 text-white hover:bg-gray-800'>复制邀请</button>
         {!connected ? (
-          <button onClick={connect} className='text-xs px-3 py-1 rounded-full bg-green-600 text-white hover:bg-green-700'>加入</button>
+          <button onClick={connect} className='text-xs px-3 py-1 rounded-full bg-green-600 text-white hover:bg-green-700'>加入/创建</button>
         ) : (
           <button onClick={disconnect} className='text-xs px-3 py-1 rounded-full bg-red-600 text-white hover:bg-red-700'>离开</button>
         )}
