@@ -50,6 +50,7 @@ function HomeClient() {
   const [loading, setLoading] = useState(true);
   const { announcement } = useSite();
   const [username, setUsername] = useState<string>('');
+  const [rotationSeed, setRotationSeed] = useState<number>(() => Math.floor(Math.random() * 1000));
 
   const [showAnnouncement, setShowAnnouncement] = useState(false);
   const [showAIRecommendModal, setShowAIRecommendModal] = useState(false);
@@ -411,6 +412,8 @@ function HomeClient() {
     const timer = setInterval(() => {
       try {
         if (typeof document === 'undefined' || document.visibilityState !== 'visible') return;
+        // 轮换种子递增，使展示条目切换
+        setRotationSeed((prev) => (prev + 1) % 1000000);
         fetchRecommendData();
       } catch (e) {
         // 忽略定时刷新错误，避免影响页面
@@ -625,13 +628,32 @@ function HomeClient() {
           ) : (
             // 首页视图
             <>
+              {(() => {
+                // 轮换选择方法：根据种子按偏移挑选固定数量的条目（环形）
+                const pickFrom = <T,>(arr: T[], count: number, seed: number): T[] => {
+                  if (!Array.isArray(arr) || arr.length === 0 || count <= 0) return [];
+                  if (arr.length <= count) return arr.slice(0, count);
+                  const start = seed % arr.length;
+                  const result: T[] = [];
+                  for (let i = 0; i < count; i++) {
+                    result.push(arr[(start + i) % arr.length]);
+                  }
+                  return result;
+                };
+                return null;
+              })()}
               {/* Hero Banner 轮播 */}
               {!loading && (hotMovies.length > 0 || hotTvShows.length > 0 || hotVarietyShows.length > 0 || hotShortDramas.length > 0) && (
                 <section className='mb-8'>
                   <HeroBanner
                     items={[
                       // 豆瓣电影
-                      ...hotMovies.slice(0, 2).map((movie) => ({
+                      ...((() => {
+                        const selected = (hotMovies && hotMovies.length > 0) ? ((rotationSeed !== undefined) ? hotMovies.slice(0) : hotMovies) : [];
+                        const start = rotationSeed % (selected.length || 1);
+                        const picks = selected.length > 0 ? [selected[start % selected.length], selected[(start + 1) % selected.length]].filter(Boolean) : [];
+                        return picks;
+                      })()).map((movie) => ({
                         id: movie.id,
                         title: movie.title,
                         poster: movie.poster,
@@ -648,7 +670,12 @@ function HomeClient() {
                         ],
                       })),
                       // 豆瓣电视剧
-                      ...hotTvShows.slice(0, 2).map((show) => ({
+                      ...((() => {
+                        const selected = (hotTvShows && hotTvShows.length > 0) ? hotTvShows.slice(0) : [];
+                        const start = (rotationSeed + 11) % (selected.length || 1);
+                        const picks = selected.length > 0 ? [selected[start % selected.length], selected[(start + 1) % selected.length]].filter(Boolean) : [];
+                        return picks;
+                      })()).map((show) => ({
                         id: show.id,
                         title: show.title,
                         poster: show.poster,
@@ -665,7 +692,12 @@ function HomeClient() {
                         ],
                       })),
                       // 豆瓣综艺
-                      ...hotVarietyShows.slice(0, 1).map((show) => ({
+                      ...((() => {
+                        const selected = (hotVarietyShows && hotVarietyShows.length > 0) ? hotVarietyShows.slice(0) : [];
+                        const start = (rotationSeed + 23) % (selected.length || 1);
+                        const picks = selected.length > 0 ? [selected[start % selected.length]].filter(Boolean) : [];
+                        return picks;
+                      })()).map((show) => ({
                         id: show.id,
                         title: show.title,
                         poster: show.poster,
@@ -682,7 +714,12 @@ function HomeClient() {
                         ],
                       })),
                       // 短剧（非豆瓣）
-                      ...hotShortDramas.slice(0, 2).map((drama) => ({
+                      ...((() => {
+                        const selected = (hotShortDramas && hotShortDramas.length > 0) ? hotShortDramas.slice(0) : [];
+                        const start = (rotationSeed + 31) % (selected.length || 1);
+                        const picks = selected.length > 0 ? [selected[start % selected.length], selected[(start + 1) % selected.length]].filter(Boolean) : [];
+                        return picks;
+                      })()).map((drama) => ({
                         id: drama.id,
                         title: drama.name,
                         poster: drama.cover,
@@ -703,7 +740,8 @@ function HomeClient() {
                             const todayAnimes = bangumiCalendarData.find(
                               (item) => item.weekday.en === currentWeekday
                             )?.items || [];
-                            return todayAnimes.slice(0, 1).map((anime) => ({
+                            const index = todayAnimes.length > 0 ? ((rotationSeed + 47) % todayAnimes.length) : 0;
+                            return todayAnimes.slice(index, index + 1).map((anime) => ({
                               id: anime.id,
                               title: anime.name_cn || anime.name,
                               poster: anime.images?.large || anime.images?.common || anime.images?.medium || '/placeholder-poster.jpg',
