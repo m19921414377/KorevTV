@@ -301,9 +301,12 @@ export default function ContinueWatching({ className }: ContinueWatchingProps) {
                       +{newEpisodesCount}集
                     </div>
                   )}
-                  {/* 上次观看时间与进度提示 */}
+                  {/* 上次观看时间与进度/集数提示 */}
                   <div className='mt-1 text-[11px] text-gray-600 dark:text-gray-400'>
                     上次观看：{new Date(record.save_time).toLocaleString('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                  </div>
+                  <div className='text-[11px] text-gray-600 dark:text-gray-400'>
+                    进度：{Math.round(getProgress(record))}% · 第{Math.max(0, record.index)}/{latestTotalEpisodes}集
                   </div>
                 </div>
               );
