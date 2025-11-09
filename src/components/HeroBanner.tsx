@@ -36,6 +36,7 @@ export default function HeroBanner({
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [showMore, setShowMore] = useState(false);
 
   // 处理图片 URL，使用代理绕过防盗链
   const getProxiedImageUrl = (url: string) => {
@@ -226,19 +227,13 @@ export default function HeroBanner({
               <Play className='w-4 h-4 sm:w-5 sm:h-5' fill='currentColor' />
               <span>播放</span>
             </Link>
-            <Link
-              href={
-                currentItem.type === 'shortdrama'
-                  ? '/shortdrama'
-                  : `/douban?type=${
-                      currentItem.type === 'variety' ? 'show' : (currentItem.type || 'movie')
-                    }`
-              }
+            <button
+              onClick={() => setShowMore(true)}
               className='flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 transition-all transform hover:scale-105 active:scale-95 shadow-lg text-sm sm:text-base'
             >
               <Info className='w-4 h-4 sm:w-5 sm:h-5' />
               <span>更多</span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -289,6 +284,47 @@ export default function HeroBanner({
       <div className='absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm font-medium'>
         {currentIndex + 1} / {items.length}
       </div>
+
+      {/* 更多详情弹层 */}
+      {showMore && (
+        <div className='fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4' onClick={() => setShowMore(false)}>
+          <LiquidGlassContainer className='w-full max-w-2xl p-6 space-y-4' roundedClass='rounded-2xl' intensity='strong' shadow='xl' border='subtle'>
+            <div className='flex items-center justify-between'>
+              <h3 className='text-lg font-semibold text-white'>{currentItem.title}</h3>
+              <button onClick={() => setShowMore(false)} className='text-xs px-3 py-1 rounded-full bg-gray-700 text-white hover:bg-gray-800'>关闭</button>
+            </div>
+            <div className='flex items-center gap-2 text-sm text-white/90'>
+              {currentItem.year && <span>{currentItem.year}</span>}
+              {currentItem.rate && <span className='px-2 py-0.5 bg-white/20 rounded'>评分 {currentItem.rate}</span>}
+              {currentItem.type && (
+                <span className='px-2 py-0.5 bg-white/20 rounded'>
+                  {currentItem.type === 'movie' ? '电影' :
+                   currentItem.type === 'tv' ? '剧集' :
+                   currentItem.type === 'variety' ? '综艺' :
+                   currentItem.type === 'shortdrama' ? '短剧' :
+                   currentItem.type === 'anime' ? '番剧' : '剧集'}
+                </span>
+              )}
+            </div>
+            <div className='text-sm text-white/80 whitespace-pre-line max-h-64 overflow-y-auto'>
+              {currentItem.description || '暂无更详细的简介'}
+            </div>
+            <div className='flex items-center justify-end gap-2'>
+              <Link
+                href={
+                  currentItem.type === 'shortdrama'
+                    ? '/shortdrama'
+                    : `/douban?type=${currentItem.type === 'variety' ? 'show' : (currentItem.type || 'movie')}`
+                }
+                className='text-xs px-3 py-1 rounded-full bg-indigo-600 text-white hover:bg-indigo-700'
+                onClick={() => setShowMore(false)}
+              >
+                跳转列表
+              </Link>
+            </div>
+          </LiquidGlassContainer>
+        </div>
+      )}
     </div>
   );
 }
