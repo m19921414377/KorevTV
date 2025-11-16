@@ -143,6 +143,8 @@ export default function ModernNav() {
           shadow='2xl'
           border='subtle'
           animated
+          animatedMode='hover'
+          tint='blue'
         >
           <div className='flex items-center justify-center gap-2'>
             {menuItems.slice(0, 9).map((item) => {
@@ -193,6 +195,8 @@ export default function ModernNav() {
       shadow='xl'
       border='subtle'
       animated
+      animatedMode='hover'
+      tint='blue'
     >
       <span className='text-base sm:text-lg font-semibold tracking-wide bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 dark:from-green-400 dark:via-emerald-300 dark:to-teal-300 bg-clip-text text-transparent'>
         {siteName}
@@ -207,6 +211,8 @@ export default function ModernNav() {
       intensity='medium'
       shadow='lg'
       border='subtle'
+      animatedMode='hover'
+      tint='blue'
     >
       <BackButton />
     </LiquidGlassContainer>
@@ -219,6 +225,8 @@ export default function ModernNav() {
           intensity='medium'
           shadow='lg'
           border='subtle'
+          animatedMode='hover'
+          tint='blue'
         >
           <div className='flex items-center gap-2'>
             <ThemeToggle />

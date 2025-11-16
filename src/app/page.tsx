@@ -874,7 +874,8 @@ function HomeClient() {
               )}
 
               {/* 热门电影 */}
-              <section className='mb-8 home-section'>
+              <section className='mb-8'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门电影" icon={Film} iconColor="text-red-500" />
                   <Link
@@ -909,10 +910,12 @@ function HomeClient() {
                       </div>
                     ))}
                 </ScrollableRow>
+                </LiquidGlassContainer>
               </section>
 
               {/* 热门剧集 */}
               <section className='mb-8 home-section'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门剧集" icon={Tv} iconColor="text-blue-500" />
                   <Link
@@ -947,10 +950,12 @@ function HomeClient() {
                       </div>
                     ))}
                 </ScrollableRow>
+                </LiquidGlassContainer>
               </section>
 
               {/* 每日新番放送 */}
               <section className='mb-8 home-section'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="新番放送" icon={Calendar} iconColor="text-purple-500" />
                   <Link
@@ -1013,10 +1018,12 @@ function HomeClient() {
                       ));
                     })()}
                 </ScrollableRow>
+                </LiquidGlassContainer>
               </section>
 
               {/* 热门综艺 */}
               <section className='mb-8 home-section'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门综艺" icon={Sparkles} iconColor="text-pink-500" />
                   <Link
@@ -1051,10 +1058,12 @@ function HomeClient() {
                       </div>
                     ))}
                 </ScrollableRow>
+                </LiquidGlassContainer>
               </section>
 
               {/* 热门短剧 */}
               <section className='mb-8'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门短剧" icon={Play} iconColor="text-orange-500" />
                   <Link
@@ -1081,6 +1090,7 @@ function HomeClient() {
                       </div>
                     ))}
                 </ScrollableRow>
+                </LiquidGlassContainer>
               </section>
             </>
           )}
