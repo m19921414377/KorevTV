@@ -5357,7 +5357,7 @@ function PlayPageClient() {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
           {/* 文字区 */}
           <div className='md:col-span-3'>
-            <div className='p-6 flex flex-col min-h-0 rounded-2xl border border-white/20 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/60 backdrop-blur-xl shadow-[0_12px_36px_0_rgba(0,0,0,0.15)]'>
+            <LiquidGlassContainer className='p-6 flex flex-col min-h-0' roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
               {/* 标题 */}
               <div className='mb-4 flex-shrink-0'>
                 <div className='flex flex-col md:flex-row md:items-center gap-3'>
@@ -5821,7 +5821,7 @@ function PlayPageClient() {
                   />
                 </div>
               </div>
-            </div>
+            </LiquidGlassContainer>
           </div>
 
           {/* 封面展示 */}

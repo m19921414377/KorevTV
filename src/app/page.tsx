@@ -698,7 +698,8 @@ function HomeClient() {
               {null}
               {/* Hero Banner 轮播 */}
               {!loading && (hotMovies.length > 0 || hotTvShows.length > 0 || hotVarietyShows.length > 0 || hotShortDramas.length > 0) && (
-                <section className='mb-8 home-section'>
+                <section className='mb-8'>
+                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
                   <HeroBanner
                     items={[
                       // 豆瓣电影
@@ -816,11 +817,14 @@ function HomeClient() {
                     showIndicators={true}
                     onRecommend={() => setShowAIRecommendModal(true)}
                   />
+                  </LiquidGlassContainer>
                 </section>
               )}
               {loading && (
-                <section className='mb-8 home-section'>
-                  <div className='w-full h-[320px] sm:h-[360px] md:h-[300px] rounded-2xl border border-white/20 dark:border-gray-700/50 bg-white/60 dark:bg-gray-800/50 backdrop-blur-md shadow-[0_12px_36px_rgba(0,0,0,0.15)] animate-pulse'></div>
+                <section className='mb-8'>
+                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                    <div className='w-full h-[320px] sm:h-[360px] md:h-[300px] rounded-2xl border border-white/20 dark:border-gray-700/50 bg-white/60 dark:bg-gray-800/50 backdrop-blur-md shadow-[0_12px_36px_rgba(0,0,0,0.15)] animate-pulse'></div>
+                  </LiquidGlassContainer>
                 </section>
               )}
 
@@ -1257,20 +1261,7 @@ function HomeClient() {
           <span className='hidden sm:inline text-sm font-semibold'>AI 助手</span>
         </button>
       </div>
-      <style jsx>{`
-        .home-section {
-          border-radius: 16px;
-          border: 1px solid rgba(255,255,255,0.2);
-          background: rgba(255,255,255,0.7);
-          backdrop-filter: saturate(180%) blur(12px);
-          box-shadow: 0 12px 36px rgba(0,0,0,0.15);
-          padding: 12px;
-        }
-        :global(html.dark) .home-section {
-          border-color: rgba(55,65,81,0.6);
-          background: rgba(31,41,55,0.6);
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </PageLayout>
   );
 }
