@@ -688,7 +688,7 @@ function HomeClient() {
           ) : activeTab === 'continue' ? (
             // 继续观看视图（仅首页的中间页）
             <section className='mb-8'>
-              <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+              <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                 <ContinueWatching />
               </LiquidGlassContainer>
             </section>
@@ -699,7 +699,7 @@ function HomeClient() {
               {/* Hero Banner 轮播 */}
               {!loading && (hotMovies.length > 0 || hotTvShows.length > 0 || hotVarietyShows.length > 0 || hotShortDramas.length > 0) && (
                 <section className='mb-8'>
-                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                   <HeroBanner
                     items={[
                       // 豆瓣电影
@@ -822,7 +822,7 @@ function HomeClient() {
               )}
               {loading && (
                 <section className='mb-8'>
-                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                     <div className='w-full h-[320px] sm:h-[360px] md:h-[300px] rounded-2xl border border-white/20 dark:border-gray-700/50 bg-white/60 dark:bg-gray-800/50 backdrop-blur-md shadow-[0_12px_36px_rgba(0,0,0,0.15)] animate-pulse'></div>
                   </LiquidGlassContainer>
                 </section>
@@ -837,7 +837,7 @@ function HomeClient() {
               })()}
               {!loading && upcomingReleases.length > 0 && (
                 <section className='mb-8'>
-                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                  <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                   <div className='mb-4 flex items-center justify-between'>
                     <SectionTitle title="即将上映" icon={Calendar} iconColor="text-orange-500" />
                     <Link
@@ -884,7 +884,7 @@ function HomeClient() {
 
               {/* 热门电影 */}
               <section className='mb-8'>
-                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门电影" icon={Film} iconColor="text-red-500" />
                   <Link
@@ -924,7 +924,7 @@ function HomeClient() {
 
               {/* 热门剧集 */}
               <section className='mb-8 home-section'>
-                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门剧集" icon={Tv} iconColor="text-blue-500" />
                   <Link
@@ -964,7 +964,7 @@ function HomeClient() {
 
               {/* 每日新番放送 */}
               <section className='mb-8 home-section'>
-                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="新番放送" icon={Calendar} iconColor="text-purple-500" />
                   <Link
@@ -1032,7 +1032,7 @@ function HomeClient() {
 
               {/* 热门综艺 */}
               <section className='mb-8 home-section'>
-                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
                 <div className='mb-4 flex items-center justify-between'>
                   <SectionTitle title="热门综艺" icon={Sparkles} iconColor="text-pink-500" />
                   <Link
@@ -1179,7 +1179,7 @@ function HomeClient() {
       {(aiEnabled === true && aiCheckTriggered && personalRecommendEnabled) && (
         <div className='mt-8 space-y-6'>
           {/* 为你推荐 */}
-          <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+          <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
           <div>
             <div className='mb-3 flex items-center justify-between'>
               <SectionTitle title='为你推荐' icon={Sparkles} iconColor='text-pink-500' />
@@ -1213,7 +1213,7 @@ function HomeClient() {
           </LiquidGlassContainer>
 
           {/* 最近热播 */}
-          <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+          <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animated={false} tint='blue'>
           <div>
             <div className='mb-3 flex items-center justify-between'>
               <SectionTitle title='最近热播' icon={Tv} iconColor='text-red-500' />
