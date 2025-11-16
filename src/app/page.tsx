@@ -26,6 +26,7 @@ import { ReleaseCalendarItem,ShortDramaItem } from '@/lib/types';
 import { DoubanItem } from '@/lib/types';
 
 import AIRecommendModal from '@/components/AIRecommendModal';
+import LiquidGlassContainer from '@/components/LiquidGlassContainer';
 import CapsuleSwitch from '@/components/CapsuleSwitch';
 import ContinueWatching from '@/components/ContinueWatching';
 import HeroBanner from '@/components/HeroBanner';
@@ -687,7 +688,9 @@ function HomeClient() {
           ) : activeTab === 'continue' ? (
             // 继续观看视图（仅首页的中间页）
             <section className='mb-8'>
-              <ContinueWatching />
+              <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
+                <ContinueWatching />
+              </LiquidGlassContainer>
             </section>
           ) : (
             // 首页视图
@@ -1170,6 +1173,7 @@ function HomeClient() {
       {(aiEnabled === true && aiCheckTriggered && personalRecommendEnabled) && (
         <div className='mt-8 space-y-6'>
           {/* 为你推荐 */}
+          <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
           <div>
             <div className='mb-3 flex items-center justify-between'>
               <SectionTitle title='为你推荐' icon={Sparkles} iconColor='text-pink-500' />
@@ -1200,8 +1204,10 @@ function HomeClient() {
               ))}
             </div>
           </div>
+          </LiquidGlassContainer>
 
           {/* 最近热播 */}
+          <LiquidGlassContainer roundedClass='rounded-2xl' intensity='high' shadow='xl' border='subtle' animatedMode='hover' tint='blue'>
           <div>
             <div className='mb-3 flex items-center justify-between'>
               <SectionTitle title='最近热播' icon={Tv} iconColor='text-red-500' />
@@ -1219,6 +1225,7 @@ function HomeClient() {
               快速浏览近期热门影视内容，支持按类型提问。
             </div>
           </div>
+          </LiquidGlassContainer>
 
           {/* 个性化开关 */}
           <div className='flex items-center justify-end'>
