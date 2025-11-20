@@ -143,7 +143,7 @@ function ScrollableRow({
             style={{
               top: '40%',
               bottom: '60%',
-              left: '-4.5rem',
+              left: '0.5rem',
               pointerEvents: 'auto',
             }}
           >
@@ -181,7 +181,7 @@ function ScrollableRow({
             style={{
               top: '40%',
               bottom: '60%',
-              right: '-4.5rem',
+              right: '0.5rem',
               pointerEvents: 'auto',
             }}
           >
